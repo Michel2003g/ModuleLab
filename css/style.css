@@ -96,7 +96,7 @@ body {
 
 .module-card > .title {
 
-    margin: 0 0 4px 0;
+    margin: 0 0 12px 0;
 
     font-weight: bold;
     font-size: 1.12em;
@@ -105,7 +105,7 @@ body {
 
 .module-card > .description {
 
-    margin: 0;
+    margin: 0 0 12px 0;
 
     text-align: center;
 
