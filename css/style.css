@@ -20,6 +20,11 @@ body {
     overflow: hidden;
 }
 
+.hide {
+    visibility: hidden;
+    position: absolute;
+}
+
 #page {
     overflow-x: hidden;
     overflow-y: auto;
@@ -52,7 +57,7 @@ body {
 }
 
 .topbar li {
-
+    margin-right: 2px;
 }
 
 .topbar a {
@@ -62,10 +67,8 @@ body {
 }
 
 .text-icon {
-    position: absolute;
-
-    height: 1.5em;
-    width: 1.5em;
+    height: 1.25em;
+    width: 1.25em;
 
     text-align: center;
 }
@@ -83,15 +86,6 @@ body {
     box-shadow: 0 0 12px 0 rgba(0, 0, 0, 0.25);
 
     border-radius: 2px;
-}
-
-.module-card > .img {
-
-    margin: 0 0 2px 0;
-
-    font-weight: bold;
-    font-size: 1.12em;
-    text-align: center;
 }
 
 .module-card > .title {

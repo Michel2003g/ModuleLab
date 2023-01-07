@@ -2,6 +2,10 @@ import {default as data} from '/ModuleLab/js/data/ModuleDatabase.js';
 
 const target = document.querySelector("#modules-container")
 
+const searchInput = document.querySelector("#module-search-input");
+
+const cards = [];
+
 function MakeCard (data) {
   const card = document.createElement("div");
 
@@ -26,9 +30,25 @@ function MakeCard (data) {
   title.appendChild(icon);
   card.append(title, description, link_button);
   target.appendChild(card);
+
+  cards.push({name: data.title, card: card});
 }
 
 Object.keys(data).forEach(key => {
   const card_data = data[key];
   MakeCard(card_data);
+});
+
+searchInput.addEventListener("input", () => {
+    cards.forEach(element => {
+
+        const name = element.name.toLowerCase();
+        const input = searchInput.value.toLowerCase();
+
+        if (name.includes(input)) {
+            element.card.classList.remove("hide");
+        } else {
+            element.card.classList.add("hide");
+        }
+    });
 });
